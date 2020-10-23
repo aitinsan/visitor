@@ -1,5 +1,6 @@
 package main
 
+
 import "fmt"
 
 type Visitor1 interface{
@@ -28,7 +29,7 @@ type DotaLand struct{
 	shope []Shop
 }
 func (d *DotaLand) Add(s Shop){
-
+	d.shope=append(d.shope,s)
 }
 
 
@@ -84,5 +85,7 @@ func main(){
 	dotaland.Add(&HiddenShop{})
 	dotaland.Add(&SideShop{})
 	fmt.Println(dotaland.Accept(&Hero{}))
-
 }
+
+
+
